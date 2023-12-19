@@ -1,0 +1,2 @@
+# managementPanel
+Angular CRUD
