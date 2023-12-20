@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-md navbar-light bg-body-tertiary">
+	<div class="container-fluid">
+		<a class="text-decoration-none" routerLink="" (click)="$event.preventDefault()">
+			<span class="navbar-brand">ABM</span>
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			aria-controls="navbarContent"
+			[attr.aria-expanded]="!collapsed"
+			aria-label="Toggle navigation"
+			(click)="collapsed = !collapsed"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="navbar-collapse" [class.collapse]="collapsed" id="navbarContent">
+			<ul class="navbar-nav mr-auto">
+        <li class="nav-item" ngbDropdown>
+					<a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown1" role="button"> Suppliers </a>
+					<div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu">
+						<a ngbDropdownItem routerLink="/suppliers" (click)="$event.preventDefault()">List</a>
+						<a ngbDropdownItem routerLink="suppliers/0" (click)="$event.preventDefault()">Form</a>
+					</div>
+				</li>
+        <li class="nav-item" ngbDropdown>
+					<a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown1" role="button"> Products </a>
+					<div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu">
+						<a ngbDropdownItem routerLink="/products" (click)="$event.preventDefault()">List</a>
+						<a ngbDropdownItem routerLink="products/0" (click)="$event.preventDefault()">Form</a>
+					</div>
+				</li>
+        <li class="nav-item" ngbDropdown>
+					<a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown1" role="button"> Orders </a>
+					<div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu">
+						<a ngbDropdownItem routerLink="/orders" (click)="$event.preventDefault()">List</a>
+						<a ngbDropdownItem routerLink="orders/0" (click)="$event.preventDefault()">Form</a>
+					</div>
+				</li>
+		  </ul>
+		</div>
+	</div>
+</nav>
